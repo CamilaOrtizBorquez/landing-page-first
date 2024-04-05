@@ -1,0 +1,518 @@
+/*FORMATEA */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*BARRA SUPERIOR*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+body section{
+    padding-top: 20px;
+    
+}
+
+header{
+    background-color: #2c3e50;
+    display: flex; /*dispone los elementos uno al lado de otro*/
+    justify-content: center; /*alinea horizontalmente*/
+    border-bottom: 2px solid #253342;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+header nav{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*alinea verticalmente*/
+    margin: 20px 0;
+}
+
+.logo{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+header nav a{
+    color: #7e95ae;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+a:hover{
+    color: #ffffff;
+}
+
+header nav ul{
+    width: 37%;
+    display: flex;
+    justify-content: space-around; /*Otorga espacio entre los elementos, incluyendo inicio y final*/
+    list-style-type: none;
+}
+
+
+/*SECCION HOME*/
+
+.section-home{
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+}
+
+.home-content,
+.about-content,
+.our-content,
+.portfolio-content,
+.contact-content{
+    width: 70%;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.title-home{
+    color: #ffffff;
+    margin: 10px 0;
+    font-size: 35px;
+    padding-top: 25px
+}
+
+.text-home{
+    color: #ffffff;
+    margin: 18px 0px 30px;
+}
+
+.image-home{
+    width: 57%;
+}
+
+/*SECCION ABOUT US*/
+
+.section-about{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.title-about,
+.title-our,
+.title-portfolio,
+.title-contact{
+    color: #6b6b6b;
+    font-size: 30px;
+    padding-top: 25px
+}
+
+.text-about,
+.text-our,
+.text-portfolio,
+.text-contact{
+    color: #6b6b6b;
+    margin: 15px 40px 0px;
+    padding: 5px 40px 15px;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.text-about2{
+    color: #6b6b6b;
+    margin: 25px 40px 0;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.about-content img{
+    width: 45%;
+    margin: 30px 0 4px;
+}
+
+
+/*SECCION OUR TEAM*/
+
+.section-team{
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+}
+
+.content-ourteam{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.figure-our{
+    width: 25%;
+    margin: 45px 0px;
+}
+
+.figure-our img{
+    width: 100%;
+    padding: 0 30px;
+}
+
+.title-figure{
+    margin: 10px 0 0;
+}
+
+.text-figure{
+    font-size: 11px;
+    padding: 8px 15px;
+    margin: 2px 6px 20px;
+    line-height: 20px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.icon-figure{
+    background-color: #2c3e50;
+    padding: 10px 21px 2px;
+    border-radius: 3px;
+}
+
+.icon-color{
+    color: #ffffff;
+}
+
+
+/*PORTAFOLIO*/
+
+.section-portfolio{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: center;
+}
+
+.list-menu-portfolio{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 19px 0;
+}
+
+.list-menu-portfolio a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #6b6b6b;
+    margin: 10px;
+    padding: 4px 19px;
+    border: 2px solid #cccccc;
+    border-radius: 3px;
+}
+
+.list-menu-portfolio a:hover{
+    border: 2px solid #2c3e50;
+    font-weight: bold;
+}
+
+/*CONTENIDO DE POTAFOLIO*/
+
+
+.section-project{
+    display: flex;
+    justify-content: center;
+}
+.project-content{
+    width: 70%;
+}
+
+.figure-project{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.figure-project figure{
+    width: 33.33%;
+    padding: 0 30px 28px;
+    position: relative; /*para que figure sea el limite*/
+}
+
+
+.img-project{
+    width: 100%;
+    height: 68%;
+    display: block;
+}
+
+.figcaption-project{
+    background-color:#9a9a9a;
+    padding: 11px 12px;
+}
+
+.figcaption-project h3{
+    color: #ffffff;
+    margin: 0 0 5px;
+}
+
+.figcaption-project p{
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 19px;
+}
+
+/*Color superpuesto*/
+.overlay{ 
+    background-color: #878686;
+    position: absolute; /*para que salte por sobre la figura hasta su limite (relative)*/
+    left: 0; /*corresponde a sus "coordenadas"*/
+    top: 0; /*corresponde a sus "coordenadas"*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /*alinea verticalmente*/
+    justify-content: center;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+}
+
+.overlay a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.figure-project :hover .overlay{
+    opacity: 1;
+}
+
+.position-overlay{
+    position: relative;
+    z-index: 1;
+}
+
+
+/*CONTACTO*/
+
+.section-contact{
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+}
+
+/*FORMULARIO*/
+
+.section-form{
+    display: flex;
+    justify-content: center;
+}
+
+.form-content{
+    width: 45%;
+    margin: 22px 0
+}
+
+.form-content label{
+    display: block;
+}
+
+.form-content input, textarea{
+    display: block;
+    width: 100%;
+    padding: 7px;
+    margin: 12px 0;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+}
+
+.form-content textarea{
+    width: 100%;
+    height: 138px;
+}
+
+::placeholder{
+    color: #9a9a9a;
+    font-size: 12px;
+}
+
+.form-content button{
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 10px 40px;
+    margin: 28px 0 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.footer-content{
+    background-color: #ffffff;
+    display: block;
+}
+
+.footer-content nav ul{
+    width: 100%;
+    display: flex;
+    margin: 15px 0px 10px;
+    padding: 15px 0 0;
+    justify-content: center;
+    list-style-type: none;
+}
+
+
+.footer-content nav a{
+    text-decoration: none;
+    font-size: 11px;
+    padding: 0 18px;
+    color: #909090;
+    font-weight: bold;
+}
+
+.list-footer{
+    border-right-style: dotted;
+    border-width: 4px;
+    color: #909090;
+}
+
+.footer-content div p{
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    font-size: 11px;
+    color: #909090;
+}
+
+
+
+
+
+/*RESPONSIVE COMPUTADOR*/
+
+
+@media screen and (max-width: 1080px){
+    .project-content {
+        width: 80%;
+    }
+
+    .figure-project figure{
+        margin: 0 0 15px;
+    }
+}
+
+
+/*RESPONSIVE TABLET*/
+
+
+@media screen and (max-width: 991px){
+    header nav ul {
+        width: 51%;
+    }
+
+    .home-content,
+    .about-content,
+    .our-content,
+    .portfolio-content,
+    .contact-content{
+        width: 90%;
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    .figure-project figure{
+        width: 50%;
+    }
+}
+
+
+
+
+/*RESPONSIVE MOBILES*/
+
+
+@media screen and (max-width: 767px){
+    header nav ul {
+        width: 55%;
+    }
+
+    .home-content,
+    .about-content,
+    .our-content,
+    .portfolio-content,
+    .contact-content{
+        width: 90%;
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    .figure-our {
+        width: 50%;
+        margin: 15px 0px;
+    }
+
+    .figure-our img{
+        padding: 20px 70px 0px;
+    }    
+    
+    .figure-project figure{
+        width: 100%;
+    }
+
+    .figure-project figure{
+        width: 100%;
+    }
+
+    .form-content {
+        width: 55%;
+    }      
+}
+
+
+
+
+@media screen and (max-width: 582px){
+    header nav ul{
+        width: 70%;
+    }
+
+    .figure-our img{
+        padding: 0 45px;
+    }
+
+    .list-menu-portfolio {
+        flex-wrap: wrap;
+    } 
+
+    .list-menu-portfolio li{
+        padding: 10px;
+    }
+
+    .text-about,
+    .text-our,
+    .text-portfolio,
+    .text-contact{
+        color: #6b6b6b;
+        margin: 15px 0px 0px;
+        padding: 5px 20px 15px;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 24px;
+    }
+
+    .project-content{
+        width: 70%;
+    }
+
+    .figure-project figure {
+        margin: 0px;
+    }
+
+    .form-content {
+        width: 60%;
+    } 
+}
+
+
